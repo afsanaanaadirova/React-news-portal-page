@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  background: #e5e5e5;
+  font-family: "Exo 2", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+}
+
+header {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.Categories {
+  text-align: center;
+}
+.Categories .Category_Name {
+  padding: 12px 32px;
+  background: #ffffff;
+  border: unset;
+  border-radius: 10px;
+  margin-right: 9px;
+  cursor: pointer;
+}
+.Categories h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
+  color: #ffffff;
+  padding-top: 70px;
+  padding-bottom: 18px;
+}
+.container {
+  background-image: url("../images/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 296px;
+}
+.Cards {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 56px;
+}
+.Card {
+  width: 345px;
+  background: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.Card .Card_Image img {
+  width: 345px;
+  height: 219px;
+  border-radius: 10px;
+}
+.Card .Card_Info {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.Card .Card_Info .Card_Info--Title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #3d3d3d;
+  position: relative;
+  padding-bottom: 4px;
+}
+.Card_Info--Title::before {
+  content: "";
+  position: absolute;
+  width: 55%;
+  bottom: -6px;
+  border: 1px solid #dadada;
+}
+.Card .Card_Info .Card_Info--Text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #646464;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  height: 112px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.Card .Card_Info .Card_Info--Footer {
+  display: flex;
+  padding-top: 18px;
+}
+.Card .Card_Info .Card_Info--Footer span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #000000;
+}
+.Card .Card_Info .Card_Info--Footer svg {
+  color: #c4c4c4;
+  margin-right: 8px;
+}
+.Date,
+.Author {
+  margin-right: 14px;
+  display: flex;
+  align-items: center;
+}
