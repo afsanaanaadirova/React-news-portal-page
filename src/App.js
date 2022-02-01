@@ -1,9 +1,9 @@
-import Result from "./container/result";
+import Home from "./container/Home";
 
 function App() {
   return (
     <div className="container">
-      <Result />
+      <Home />
     </div>
   );
 }
