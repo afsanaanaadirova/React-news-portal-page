@@ -17,10 +17,11 @@ function Home() {
     e.preventDefault();
     setTitle(e.target.innerText.toLowerCase());
   };
+
   return (
     <div>
       <CategoryNames handlerClick={handlerClick} />
-      <Card posts={posts} />
+      <Card posts={posts} title={title} />
     </div>
   );
 }

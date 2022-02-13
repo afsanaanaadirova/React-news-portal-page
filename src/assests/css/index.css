@@ -66,6 +66,7 @@ header {
 .Card {
   width: 345px;
   background: #ffffff;
+  text-decoration: unset;
   border-radius: 10px;
   cursor: pointer;
   filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
@@ -129,4 +130,149 @@ header {
   margin-right: 14px;
   display: flex;
   align-items: center;
+}
+/* PostInner */
+.Post-Info {
+  width: 1076px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  color: #646464;
+  margin: 0 auto;
+  padding: 18px;
+  margin-top: 60px;
+  margin-bottom: 102px;
+}
+.Post-Info .Post-Info--left {
+  margin-right: 36px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.Post-Info .Post-Info--left .Image img {
+  width: 440px;
+  height: 344px;
+  border-radius: 10px;
+}
+.Post-Info .Post-Info--left .Footer-Info {
+  display: flex;
+  padding-top: 20px;
+}
+.Post-Info .Post-Info--left .Footer-Info svg {
+  margin-right: 8px;
+}
+.Post-Info .Post-Info--left .Footer-Info span {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #000000;
+}
+.Post-Info .Post-Info--right span {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #646464;
+}
+.Post-Info .Post-Info--right .Title h4 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #3d3d3d;
+  position: relative;
+}
+.Post-Info .Post-Info--right .Title h4::before {
+  content: "";
+  position: absolute;
+  width: 55%;
+  bottom: -20px;
+  border: 1px solid #dadada;
+}
+.Post-Info .Post-Info--right .Content {
+  padding-top: 42px;
+}
+.Post-Info .Post-Info--right .Content p {
+  height: 288px;
+  overflow: hidden;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #646464;
+}
+.Posts-Similar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  padding-top: 32px;
+  padding-bottom: 200px;
+}
+.Posts-Similar--title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  padding-left: 108px;
+}
+
+.Post-Similar {
+  cursor: pointer;
+}
+.Posts-Similar .Post-Similar .Similar-Layout {
+  width: 369px;
+  height: 232px;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.Posts-Similar .Post-Similar .Similar-Layout::before {
+  content: "";
+  background: rgba(0, 6, 63, 0.5);
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.Posts-Similar .Post-Similar .Similar-Layout .Similar-Layout--img {
+  position: absolute;
+  z-index: -1;
+}
+
+.Posts-Similar .Post-Similar .Similar-Layout .Similar-Layout--img img {
+  width: 369px;
+  height: 232px;
+  object-fit: fill;
+  border-radius: 12px;
+}
+.Posts-Similar .Post-Similar .Similar-Layout .Content {
+  padding: 52px 22px;
+  height: 136px;
+  overflow: hidden;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+.Posts-Similar .Post-Similar .Similar-Layout svg {
+  margin-right: 6px;
+}
+.Posts-Similar .Post-Similar .Similar-Layout .Footer-Info {
+  padding: 22px;
+  display: flex;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+}
+.Similar-Layout--Info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Posts-Similar--Link {
+  text-decoration: unset;
 }

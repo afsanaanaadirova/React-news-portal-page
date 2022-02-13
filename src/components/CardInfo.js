@@ -1,19 +1,17 @@
 import React from "react";
 import { FaRegClock, FaRegUser } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
-function Card({ posts, title }) {
+export function CardInfo({ posts }) {
   return (
     <div className="Cards">
       {posts.map((post, index) => (
-        <Link
-          exact={true}
-          to={`/${title}/${post.title}`}
+        <div
           className="Card"
           key={post.url}
+          onClick={() => console.log({ post })}
         >
           <div className="Card_Image">
-            <img src={post.imageUrl} alt="" />
+            <img src={post.imageUrl} alt={post.author} />
           </div>
           <div className="Card_Info">
             <h3 className="Card_Info--Title">{post.title}</h3>
@@ -29,9 +27,8 @@ function Card({ posts, title }) {
               </div>
             </span>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );
 }
-export default Card;
