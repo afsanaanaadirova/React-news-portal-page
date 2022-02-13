@@ -6,14 +6,12 @@ import { FaRegClock, FaRegUser } from "react-icons/fa";
 
 const NewInner = ({ handlerClick }) => {
   const params = useParams();
-  console.log(params);
   const [item, setItem] = useState({});
   const [posts, setPosts] = useState([]);
 
   const topFunction = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    document.body.style.transition = "all 2s";
   };
   useEffect(() => {
     fetch(

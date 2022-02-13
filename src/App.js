@@ -8,6 +8,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/:category/:title" element={<NewInner />} />
+        <Route exact path="/category/:category" element={<Home />} />
       </Routes>
     </div>
   );
