@@ -211,14 +211,13 @@ header {
   font-size: 20px;
   line-height: 24px;
   color: #000000;
-  padding-left: 108px;
 }
 
 .Post-Similar {
   cursor: pointer;
 }
 .Posts-Similar .Post-Similar .Similar-Layout {
-  width: 369px;
+  width: 346px;
   height: 232px;
   filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
   border-radius: 12px;
@@ -242,7 +241,7 @@ header {
 }
 
 .Posts-Similar .Post-Similar .Similar-Layout .Similar-Layout--img img {
-  width: 369px;
+  width: 346px;
   height: 232px;
   object-fit: fill;
   border-radius: 12px;
@@ -275,4 +274,12 @@ header {
 }
 .Posts-Similar--Link {
   text-decoration: unset;
+}
+.active {
+  background-color: #5151ff !important;
+  color: #fff !important;
+}
+.Posts-Similar--all {
+  width: 1076px;
+  margin: 0 auto;
 }

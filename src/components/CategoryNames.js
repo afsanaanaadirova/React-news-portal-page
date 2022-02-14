@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { categories } from "../utils/categories";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router";
 
 function CategoryNames({ handlerClick }) {
+  const [activeClass, setActiveClass] = useState("active");
   return (
     <div className="CategoryItems">
       <div className="Categories">
@@ -13,11 +13,18 @@ function CategoryNames({ handlerClick }) {
             exact={true}
             to={`/category/${data.category.toLowerCase()}`}
             key={data.category}
+            onClick={handlerClick}
           >
             <button
-              className="Category_Name"
-              onClick={handlerClick}
+              className={
+                activeClass === data.category
+                  ? "Category_Name active"
+                  : "Category_Name "
+              }
               key={data.category}
+              onClick={() => {
+                setActiveClass(data.category);
+              }}
             >
               {data.category}
             </button>

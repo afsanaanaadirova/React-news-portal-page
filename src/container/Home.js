@@ -16,6 +16,7 @@ function Home() {
   const handlerClick = (e) => {
     e.preventDefault();
     setTitle(e.target.innerText.toLowerCase());
+    console.log(title);
   };
 
   return (

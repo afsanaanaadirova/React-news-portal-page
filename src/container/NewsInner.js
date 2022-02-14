@@ -54,42 +54,44 @@ const NewInner = ({ handlerClick }) => {
           </div>
         </div>
       </div>
-      <h3 className="Posts-Similar--title">Similar news</h3>
-      <div className="Posts-Similar">
-        {posts.map((post, index) =>
-          index > 2 ? (
-            ""
-          ) : (
-            <Link
-              exact={true}
-              to={`/${params.category}/${post.title}`}
-              className="Posts-Similar--Link"
-              onClick={topFunction}
-            >
-              {" "}
-              <div className="Post-Similar">
-                <div className="Similar-Layout">
-                  <div className="Similar-Layout--img">
-                    <img src={post.imageUrl} alt="" />
-                  </div>
-                  <div className="Similar-Layout--Info">
-                    <div className="Content">{post.content}</div>
-                    <div className="Footer-Info">
-                      <div className="Date">
-                        <FaRegClock />
-                        <span>{item.date}</span>
-                      </div>
-                      <div className="Author">
-                        <FaRegUser />
-                        <span>{item.author}</span>
+      <div className="Posts-Similar--all">
+        <h3 className="Posts-Similar--title">Similar news</h3>
+        <div className="Posts-Similar">
+          {posts.map((post, index) =>
+            index > 2 ? (
+              ""
+            ) : (
+              <Link
+                exact={true}
+                to={`/${params.category}/${post.title}`}
+                className="Posts-Similar--Link"
+                onClick={topFunction}
+              >
+                {" "}
+                <div className="Post-Similar">
+                  <div className="Similar-Layout">
+                    <div className="Similar-Layout--img">
+                      <img src={post.imageUrl} alt="" />
+                    </div>
+                    <div className="Similar-Layout--Info">
+                      <div className="Content">{post.content}</div>
+                      <div className="Footer-Info">
+                        <div className="Date">
+                          <FaRegClock />
+                          <span>{item.date}</span>
+                        </div>
+                        <div className="Author">
+                          <FaRegUser />
+                          <span>{item.author}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          )
-        )}
+              </Link>
+            )
+          )}
+        </div>
       </div>
     </div>
   );
