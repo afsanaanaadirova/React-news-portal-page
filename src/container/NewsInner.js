@@ -25,6 +25,7 @@ const NewInner = ({ handlerClick }) => {
         );
         setItem(itemNew);
       });
+    console.log(params);
   }, [params]);
   return (
     <div>

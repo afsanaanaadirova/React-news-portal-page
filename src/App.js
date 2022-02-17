@@ -2,7 +2,7 @@ import Home from "./container/Home";
 import NewInner from "./container/NewsInner";
 import { Routes, Route } from "react-router-dom";
 
-function App() {
+function App(e) {
   return (
     <div className="container">
       <Routes>

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { categories } from "../utils/categories";
 import CategoryNames from "../components/CategoryNames";
+import { useNavigate } from "react-router-dom";
 import Card from "../components/Card";
 
 function Home() {
   const [posts, setPosts] = useState([]);
   const [title, setTitle] = useState(categories[0].category.toLowerCase());
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`https://inshortsapi.vercel.app/news?category=${title}`)
@@ -14,9 +16,8 @@ function Home() {
   }, [title]);
 
   const handlerClick = (e) => {
-    e.preventDefault();
     setTitle(e.target.innerText.toLowerCase());
-    console.log(title);
+    navigate(`/category/${e.target.innerText.toLowerCase()}`);
   };
 
   return (

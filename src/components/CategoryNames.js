@@ -1,30 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { categories } from "../utils/categories";
-import { Link } from "react-router-dom";
 
 function CategoryNames({ handlerClick }) {
-  const [activeClass, setActiveClass] = useState("active");
+  const [activeClass, setActiveClass] = useState();
+  const { category } = useParams();
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(location, category);
+    setActiveClass(category);
+  }, [location, category]);
+
   return (
     <div className="CategoryItems">
       <div className="Categories">
         <h2>News</h2>
         {categories.map((data) => (
-          <Link
-            exact={true}
-            to={`/category/${data.category.toLowerCase()}`}
-            key={data.category}
-            onClick={handlerClick}
-          >
+          <Link exact={true} to={`/category/${data.category.toLowerCase()}`}>
+            {" "}
             <button
               className={
-                activeClass === data.category
+                data.category.toLowerCase() === activeClass
                   ? "Category_Name active"
-                  : "Category_Name "
+                  : " Category_Name"
               }
+              onClick={handlerClick}
               key={data.category}
-              onClick={() => {
-                setActiveClass(data.category);
-              }}
             >
               {data.category}
             </button>
